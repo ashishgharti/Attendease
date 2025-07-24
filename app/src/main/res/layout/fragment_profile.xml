@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".fragment.ProfileFragment">
+
+    <!-- Profile Image with Camera Icon -->
+    <FrameLayout
+        android:id="@+id/profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_pic"
+            app:civ_border_width="0.5dp"
+            app:civ_border_color="@color/gray"
+            android:scaleType="centerCrop"
+            />
+
+
+        <ImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_camera"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </FrameLayout>
+
+    <!-- Profile Name -->
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bidhan Basnet"
+        android:textSize="20sp"
+        android:textColor="@color/gray2"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Update Profile Text -->
+    <TextView
+        android:id="@+id/updateProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Update Profile"
+        android:textSize="22sp"
+        android:textColor="#414042"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/profileName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Email Address Input -->
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/updateProfileText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/emailIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/message"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Password Input -->
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/emailLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/passwordIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/lock"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/password_pencil"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pencil"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Join Date Input -->
+    <LinearLayout
+        android:id="@+id/join_date"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/join_date_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/calender"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/join_date_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Join Date"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Phone Number Input -->
+    <LinearLayout
+        android:id="@+id/phone_number"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/join_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/phone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/phone"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/phone_number_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Phone Number"
+            android:fontFamily="@font/roboto"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/phone_pencil"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pencil"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Log Out Button with Icon -->
+    <LinearLayout
+        android:id="@+id/logoutLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:background="@drawable/logout_button_background"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/logoutIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/logout"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/logoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

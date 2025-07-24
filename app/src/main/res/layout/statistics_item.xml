@@ -1,0 +1,65 @@
+<!-- res/layout/item_activity.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/radius1">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_check_in"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/activity_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apr 29, 2023"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#414042"/>
+
+        <TextView
+            android:id="@+id/activity_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 am"
+            android:textSize="14sp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/status_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layoutDirection="rtl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="14sp"
+            android:textColor="@color/gray"/>
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#F77878"/>
+    </LinearLayout>
+</LinearLayout>

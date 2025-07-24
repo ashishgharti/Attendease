@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Attendease</string>
+    <string name="attendance">Attendance</string>
+    <string name="_09_55_am">09:55 AM</string>
+    <string name="wednesday_feb_17">Wednesday, Feb 17</string>
+    <string name="status_now_you_are_at_nbr">Now you are at NBR</string>
+    <string name="initial_placeholder">Fetching your location...</string>
+    <string name="location_not_found">Location not found</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="update">UPDATE</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="change_your_phone_number">Change your phone number</string>
+    <string name="enter_your_old_number">Enter your old number</string>
+    <string name="old_number">Old Number</string>
+    <string name="enter_your_new_number">enter_your_new_number</string>
+    <string name="Enter_your_new_number">Enter_your_new_number</string>
+    <string name="enter_you_new_number">Enter you new number</string>
+    <string name="new_number">New Number</string>
+    <string name="upload">Upload</string>
+    <string name="media_upload">Media Upload</string>
+    <string name="add_your_photo_here">Add your photo here.</string>
+    <string name="save">SAVE</string>
+    <string name="browse_files">Browse files</string>
+    <string name="or">OR</string>
+    <string name="drag_your_file_s_to_start_uploading">Drag your file(s) to start uploading</string>
+    <string name="personal_statistics">Personal Statistics</string>
+    <string name="export_data">EXPORT DATA</string>
+    <string name="total_present">Total Present</string>
+    <string name="late">Late</string>
+    <string name="leaves">Leaves</string>
+    <string name="mm_dd_yy">mm/dd/yy</string>
+    <string name="end_date">End Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="date">Date</string>
+    <string name="leaves_filter">Leaves Filter</string>
+    <string name="leave_types">Leave Types</string>
+    <string name="password_changed">Password Changed</string>
+    <string name="you_ve_completed_change_the_password">You’ve completed change the password.</string>
+    <string name="_5_mins_ago">5 mins ago</string>
+    <string name="select_leave_types">Select leave types</string>
+
+
+    <string-array name="leave_types">
+        <item>Vacation</item>
+        <item>Sick Leave</item>
+        <item>Study Leave</item>
+        <item>Other</item>
+    </string-array>
+
+
+</resources>

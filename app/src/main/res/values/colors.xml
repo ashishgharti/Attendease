@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#2EAC1B</color>
+    <color name="gray">#A7A2A2</color>
+    <color name="gray1">#A2A2A2</color>
+    <color name="red">#99F33030</color>
+    <color name="blue">#2B2BB1</color>
+    <color name="gray2">#656565</color>
+    <color name="approved">#23B480</color>
+    <color name="pending">#FF9707</color>
+    <color name="rejected">#F66659</color>
+    <color name="on_time">#0505CE</color>
+    <color name="late">#BCBC2B</color>
+    <color name="early">#23B480</color>
+    <color name="over_time">#FFA500</color>
+    <color name="leave">#F66659</color>"
+    <color name="blue_transparent">#6565CA</color>"
+    <color name="red_transparent">#99E45353</color>"
+
+</resources>

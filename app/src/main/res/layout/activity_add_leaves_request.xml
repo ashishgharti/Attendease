@@ -1,0 +1,219 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".AddLeavesRequestActivity">
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leave Request"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+
+    <!-- Select Dates Section -->
+    <TextView
+        android:id="@+id/select_Dates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Dates:"
+        android:textSize="18sp"
+        android:textColor="#414042"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- From Date -->
+    <LinearLayout
+        android:id="@+id/from_date"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/select_Dates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/et_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="From:"
+            android:inputType="date"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/from_calendar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_calender"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- To Date -->
+    <LinearLayout
+        android:id="@+id/to_date"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/from_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/et_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="To:"
+            android:inputType="date"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/to_calendar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_calender"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- About Your Leave Section -->
+    <TextView
+        android:id="@+id/tv_about_leave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="About Your Leave:"
+        android:textSize="18sp"
+        android:textColor="#414042"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/to_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Material Spinner -->
+    <Spinner
+        android:id="@+id/custom_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_leave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Substitute Field -->
+    <LinearLayout
+        android:id="@+id/substitute"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/custom_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/et_substitute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Substitute:"
+            android:inputType="text"
+            android:padding="8dp"
+            android:fontFamily="@font/roboto"
+            android:background="@android:color/transparent"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <!-- Details Field -->
+    <EditText
+        android:id="@+id/et_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Details:"
+        android:background="@drawable/edittext_background"
+        android:padding="16dp"
+        android:lines="4"
+        android:gravity="top"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/substitute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_request_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT REQUEST"
+        android:backgroundTint="@color/green"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/llFilterContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/radius2"
+        android:layout_alignParentTop="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/leaves_filter"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray2"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:layout_marginEnd="16dp"
+                />
+        </LinearLayout>
+
+        <!-- Date Range -->
+        <TextView
+            android:id="@+id/tvDateRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/gray2"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/calender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp"
+                android:background="@drawable/radius1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_startdatetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_date"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray2"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm/dd/yy"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray1"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_calender"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp"
+                android:background="@drawable/radius1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_enddatetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/end_date"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray2"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mm_dd_yy"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray1"
+                        android:layout_gravity="center_horizontal"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_calender"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Status Filters -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+        <LinearLayout
+            android:id="@+id/llStatusFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnAccepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accepted"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:backgroundTint="@color/green"/>
+            <Button
+                android:id="@+id/btnRejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rejected"
+                android:textSize="14sp"
+                android:textColor="@color/gray2"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CANCEL"
+                android:textSize="16sp"
+                android:backgroundTint="@color/gray2"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="APPLY"
+                android:textSize="16sp"
+                android:backgroundTint="@color/green"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
